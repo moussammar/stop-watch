@@ -1,9 +1,13 @@
 let msec=0;
 let sec=0;
+min=0;
+hr=0;
 let interval;
 
 let msec_html=document.getElementById("msec");
 let sec_html=document.getElementById("sec");
+let min_html=document.getElementById("min");
+let hr_html=document.getElementById("hr");
 const start_btn=document.getElementById("start_button");
 const stop_btn=document.getElementById("stop_button");
 const reset_btn=document.getElementById("reset_button");
@@ -39,6 +43,28 @@ function start_timer(){
             sec_html.innerHTML="0"+sec;
         }else{
             sec_html.innerHTML=sec;
+        }
+    }
+    if (sec>59) {
+        min+=1;
+        sec=0;
+        sec_html.innerHTML="00";
+        if (min<=9){
+            min_html.innerHTML="0"+min;
+        }
+        else {
+            min_html.innerHTML=min;
+        }
+    }
+    if (min>59){
+        hr+=1;
+        min=0;
+        min_html.innerHTML="00";
+        if (hr<=9){
+            hr_html.innerHTML="0"+hr;
+        }
+        else{
+            hr_html.innerHTML=hr;
         }
     }
 }
