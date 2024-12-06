@@ -23,6 +23,8 @@ reset_btn.addEventListener('click', ()=>{
     clearInterval(interval);
     msec=0;
     sec=0;
+    min=0;
+    hr=0;
     msec_html.innerHTML="00";
     sec_html.innerHTML="00";
 });
