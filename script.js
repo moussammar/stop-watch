@@ -27,6 +27,8 @@ reset_btn.addEventListener('click', ()=>{
     hr=0;
     msec_html.innerHTML="00";
     sec_html.innerHTML="00";
+    min_html.innerHTML="00";
+    hr_html.innerHTML="00";
 });
 
 function start_timer(){
